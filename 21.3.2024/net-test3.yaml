@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: net-test3
+  labels:
+    role: net-test3
+spec:
+  containers:
+  - name: nettest3
+    image: jonlangemak/net_tools

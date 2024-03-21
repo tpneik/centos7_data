@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: net-test-service  
+  labels:
+    service: net-test
+spec:
+  selector:
+    role: net-test
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+

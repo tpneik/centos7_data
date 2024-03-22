@@ -1,24 +1,24 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: net-test1
+  name: net-test
   labels:
-    role: net-test1
+    role: net-test
 spec:
   containers:
-  - name: nettest1
+  - name: nettest
     image: jonlangemak/net_tools
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: net-test1-service  
+  name: net-test-service  
   labels:
-    service: net-test1
+    service: net-test
 spec:
   selector:
-    role: net-test1
+    role: net-test
   type: ClusterIP
   ports:
   - name: http
